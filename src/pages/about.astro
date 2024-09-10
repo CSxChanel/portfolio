@@ -1,0 +1,110 @@
+---
+import "../styles/about-section.css";
+import "../styles/about-section.css";
+import YoutubeLastvid from "../components/YoutubeLastvid.astro";
+import BaseHead from "../components/BaseHead.astro";
+import ToogleDarkBtn from "../ToggleDarkBtn.astro";
+import BtnToTop from "../components/BtnToTop.astro";
+import Footer from "../components/Footer.astro";
+import DarkBg from "../components/DarkBg.astro";
+import NavLinks from "../components/NavLinks.astro";
+import CardTerminal from "../layouts/CardTerminal.astro";
+import ContactSocialIcons from "../components/ContactSocialIcons.astro";
+import VsCodeTheme from "../components/VsCodeTheme.astro"
+import Divider4 from "../components/atoms/Dividers/Divider4.astro";
+import { about } from "../data/MenuData";
+import DividerTop from "../components/atoms/Dividers/DividerTop.astro";
+const { title, description } = Astro.props;
+
+
+---
+
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <NavLinks origin={about} />
+    <ToogleDarkBtn />
+    <BtnToTop />
+    <main>
+      <section class="about__intro" id="about">
+        <div class=" about__imageIcons" ata-aos="fade-up">
+          <img
+            class="about__profile"
+            src="../ccp/animation.gif"
+            alt="sofidev picture"
+          />
+          <div class="icons__container">
+            <ContactSocialIcons />
+          </div>
+        </div>
+        <CardTerminal >
+          <h2 class="about__titulo--post post__titulo">
+            Çecep <span class="span__dark" id="span-titulo2"> Sudrajat</span> 
+          </h2>
+          <p class="terminal__content terminal__content--p">
+            ≥ Saya adalah seorang pengembang web yang memiliki pengalaman lebih dari 5 tahun dalam berbagai posisi yang terkait dengan teknisi perawatan mesin, penjualan, pemasaran, dan merchandising. Selain pengalaman tersebut, saya juga memiliki minat yang mendalam di bidang
+            <span class="terminal__content terminal__content--span"
+              >pengembangan web,</span
+            > terutama di bagian<span class="terminal__content terminal__content--span"
+              > front-end.</span
+            >
+          </p>
+          <p class="terminal__content terminal__content--color">
+            Saya telah belajar secara otodidak dengan mengikuti tutorial Bootcamp untuk mengembangkan keterampilan saya dalam <span class="terminal__content terminal__content--span"
+              >React.js, JavaScript, TypeScript, Next.js, Bootstrap, Node.js, dan Tailwind CSS.</span
+            >
+          </p>
+          <p class="terminal__content terminal__content--p">
+            Saya mengkhususkan diri dalam teknologi frontend seperti React.js, Next.js, dan Tailwind CSS, dan saya selalu bersemangat untuk menghadapi tantangan baru dan berkolaborasi dalam proyek inovatif.
+          </p>
+          <p class="terminal__content terminal__content--color">
+            Untuk menerapkan apa yang telah saya pelajari, saya telah mengerjakan beberapa proyek dan menyimpannya di <span class="terminal__content terminal__content--span"
+              > GitHub.</span
+            > Beberapa proyek yang telah saya selesaikan
+          </p>
+        </CardTerminal>
+      </section>
+      <Divider4/>
+      <VsCodeTheme/>
+     
+		<CardTerminal >
+			 <p class="terminal__content terminal__content--color">
+            Ke pasar beli ikan gurame,
+			Jangan lupa bawa keranjang.
+			Kalau jodoh tak akan ke manae,
+			Meski harus menunggu panjeng 😂<span class="terminal__content terminal__content--span"
+              >Sekian dan terimakasih, The_End....</span
+            >
+          </p> 
+     <DividerTop colorLight="fill__black" colorDark="dark__black" dividerBg="black" dividerBgDark="" />
+      
+      <section class="about__text"></section>
+    </main>
+    <DarkBg />
+    <Footer />
+    <style>
+      .about__page {
+        width: 100%;
+        padding: 1rem .4rem 0 .4rem;
+        height: auto;
+      }
+      .post__titulo {
+        color: white;
+      }
+      .text_content {
+        color: white;
+      }
+      @media screen and (min-width: 768px) {
+        .about__page {
+        width: 100%;
+        padding: 1rem 2rem 0 2rem;
+        height: auto;
+      }
+      }
+    </style>
+
+  </body>
+</html>

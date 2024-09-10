@@ -1,0 +1,68 @@
+---
+import "../styles/components/VsCodeTheme.css"
+---
+
+<script>
+  import { themeData } from "../data/VsCodeThemeData.js";
+  const themePanel = document.querySelector(".code__container");
+  const iconContainer = document.querySelector(".caja_icon");
+  const iconBtn = themeData
+    .map(
+      (iconData) => `
+        <div class="icon__container" data-language="${iconData.language}">
+        <iconify-icon class="icon__lang" icon=${iconData.icon}></iconify-icon>
+        </div>
+    `
+    )
+    .join("");
+  iconContainer.innerHTML = iconBtn;
+  renderView("javascript");
+
+  // Al hacer clic en el icono
+  const iconsClicked = document.querySelectorAll(".icon__container");
+
+  iconsClicked.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      const language = icon.dataset.language;
+      renderView(language);
+    });
+  });
+
+  function renderView(language) {
+    const data = themeData.find((item) => item.language === language);
+    if (data) {
+      const codeEditor = `
+            <div class="theme-preview">
+                <img loading="eager" src="${data.src}" alt="${language}">
+            </div>
+        `;
+      themePanel.innerHTML = codeEditor;
+    } else {
+      console.error(`No se encontraron datos para el lenguaje ${language}`);
+    }
+  }
+</script>
+<section class="about__page vsCode__theme" id="vsTheme">
+
+<div class="caja_icon"></div>
+
+<div class="extension">
+  <div class="code__container"></div>
+  <div class="extension-info">
+    <div class="extension-name">
+      <h2>Cp_Sudrajat Theme</h2>
+      <h3>by Çp_Sjt</h3>
+    </div>
+    <p class="extension-description">Buka HP di pagi hari,
+Pesan WhatsApp sudah menanti.
+Kalau chat tak kunjung dibalas lagi,
+Mungkin dia sibuk atau lupa hati!</p>
+    <h6 class="extension-actions-heading">Sok mangga di antos 👇</h6>
+    <div class="extension-actions">
+<a class="link__boton boton titulo__dark  span button-secondary"
+        href="https://wa.me/6282213452856?text=*Hallo!*,%20Agar%20silaturahmi%20tetap%20terjaga%20Pinjam%20dulu%20*Seratus*%F0%9F%99%88%20" target="_blank">WhatsApp</a
+      >
+    </div>
+  </div>
+</div>
+</section>

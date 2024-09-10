@@ -1,0 +1,56 @@
+---
+import "../styles/components/hero.css";
+import DarkBg from "./DarkBg.astro";
+import HeroIcons from "./HeroIcons.astro";
+---
+<section class="hero" id="hero" transition:persist>
+  <div class="hero__contenedor">
+    <div class="hero__saludo">
+      <h1
+        class="hero__titulo"
+        id="titulo-saludo"
+        data-section="hero"
+        data-value="heroTitulo"
+      >
+        Hi! I'm Cp_<span class="flicker-in-1 span__dark">Sudrajat</span>
+      </h1>
+      <h2
+        class="hero__subtitulo"
+        id="subtitulo"
+        data-section="hero"
+        data-value="heroSubtitulo"
+      >
+        ≥ Pengangguran Handal in <span class="hero__subtitulo--span"
+          >Banten</span
+        >
+      </h2>
+    </div>
+    <aside class="side__container">
+      <img
+        class="side__img img__ligth imgBulat"
+        src="./ccp/ngorong.jpg"
+        alt="Sofidev profile photo"
+      />
+      <img
+        class="side__img img__dark"
+        src="./ccp/avatar.png"
+        alt="Sofidev profile photo"
+      />
+      <img
+        class="side__img img__damage"
+        src="./ccp/dummy-user.png"
+        alt="Sofidev profile photo"
+      />
+      <HeroIcons/>
+    </aside>
+  </div>
+  <DarkBg />
+<style>
+	.imgBulat {
+		height: auto;
+		width: 500px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+</style>
+</section>
