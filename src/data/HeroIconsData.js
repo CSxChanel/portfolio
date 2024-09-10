@@ -17,7 +17,7 @@ export const HeroIconsSocial = [
     {
         name: "linkedin",
         class: "icon-3",
-        url: "https://www.linkedin.com/in/sofidev/",
+        url: "https://www.linkedin.com/in/cecep-sudrajat/",
         src: "./svg/linkedin.svg"
     },
     {

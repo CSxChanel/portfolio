@@ -34,8 +34,8 @@ const portafolioData = [
         titulo: "My Portfolio",
         skills: ["Astro", "React", "JavaScript"],
         descripcion: "Just the repository of my portfolio on GitHub.",
-        demoURL: "https://cpsudrajat-movie.vercel.app/autot",
-        repoURL: "https://github.com/SofiDevO/sofidev-portfolio-astro",
+        demoURL: "https://cpsudrajat-movie.vercel.app/autor",
+        repoURL: "https://github.com/CSxChanel/portfolio",
         anim: "fade-right"
     },
     {
